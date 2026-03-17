@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TheCoreTweaker — Windows Optimization Utility</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="assets/ct-logo.png" class="logo" alt="TheCoreTweaker Logo">
+      <div class="brand-block">
+        <span class="brand-title">TheCoreTweaker</span>
+        <span class="brand-sub">Windows Optimization Utility</span>
+      </div>
+    </div>
+    <nav class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#tweaks">Tweaks</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+        <li><a href="https://github.com/1245ym/TheCoreTweaker" target="_blank">GitHub</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero section fade-in">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-pill">⚡ 60+ Real System Tweaks • Free & Open Source</p>
+        <h1>Optimize Windows Like a Power User.</h1>
+        <p class="hero-sub">
+          TheCoreTweaker is a GUI-based Windows optimization utility for gamers, creators, and power users.
+          Every tweak is script-based, transparent, and reversible.
+        </p>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary">Run via PowerShell</a>
+          <a href="TheCoreTweaker.ps1" download class="btn btn-ghost">Download Script (.ps1)</a>
+        </div>
+        <div class="hero-meta">
+          <span>60+ Tweaks</span>
+          <span>4 Categories</span>
+          <span>MIT Licensed</span>
+        </div>
+      </div>
+      <div class="hero-card glass">
+        <div class="hero-card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="hero-card-title">TheCoreTweaker.ps1</span>
+        </div>
+        <div class="hero-card-body">
+          <p class="hero-card-label">PowerShell (Admin)</p>
+          <code class="hero-code">
+PS C:\> irm https://raw.githubusercontent.com/1245ym/TheCoreTweaker/main/TheCoreTweaker.ps1 | iex
+          </code>
+          <button class="btn btn-small" onclick="copyCommand()">Copy Command</button>
+          <p class="hero-note">
+            Requires Windows 10/11 • Run in elevated PowerShell • GUI loads with all tweaks organized by category.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section fade-in">
+    <div class="section-header">
+      <h2>Why TheCoreTweaker</h2>
+      <p>Real system optimizations that actually make a difference.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card glass">
+        <h3>Gaming Performance (15+)</h3>
+        <p>Disable GameDVR, enable HAGS, set GPU priority high, reduce latency, and keep your FPS consistent.</p>
+        <ul>
+          <li>Disable GameDVR</li>
+          <li>Enable HAGS</li>
+          <li>Set GPU Priority High</li>
+          <li>Disable Power Throttling</li>
+        </ul>
+      </article>
+      <article class="feature-card glass">
+        <h3>Network & Internet (15+)</h3>
+        <p>Optimize TCP, DNS, and adapter settings to reduce latency and improve stability for online gaming.</p>
+        <ul>
+          <li>Enable TCP RSS</li>
+          <li>Flush DNS & Winsock</li>
+          <li>Enable TCP Fast Open</li>
+          <li>Disable NetBIOS over TCP</li>
+        </ul>
+      </article>
+      <article class="feature-card glass">
+        <h3>Privacy & Security (15+)</h3>
+        <p>Disable telemetry, tracking, and unnecessary background services while keeping control in your hands.</p>
+        <ul>
+          <li>Disable Telemetry Service</li>
+          <li>Disable Advertising ID</li>
+          <li>Disable Feedback Requests</li>
+          <li>Reduce Diagnostic Data</li>
+        </ul>
+      </article>
+      <article class="feature-card glass">
+        <h3>Winget Apps (15)</h3>
+        <p>Install your essentials in one go: browsers, tools, launchers, and productivity apps.</p>
+        <ul>
+          <li>Chrome, Firefox, Edge</li>
+          <li>Discord, Steam, Spotify</li>
+          <li>VS Code, Git, 7-Zip</li>
+          <li>OBS Studio, VLC, more</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- TWEAKS OVERVIEW -->
+  <section id="tweaks" class="section fade-in">
+    <div class="section-header">
+      <h2>60+ System Tweaks</h2>
+      <p>Every tweak explained — pick and choose what you need inside the app.</p>
+    </div>
+    <div class="tweak-grid">
+      <div class="tweak-column glass">
+        <h3>Gaming Performance</h3>
+        <ul>
+          <li><strong>Disable GameDVR:</strong> Stops Xbox Game Bar recording to save CPU/GPU.</li>
+          <li><strong>Enable HAGS:</strong> Enables hardware-accelerated GPU scheduling.</li>
+          <li><strong>Disable Fullscreen Optimizations:</strong> Prevents Windows fullscreen interference.</li>
+          <li><strong>Set GPU Priority High:</strong> Prioritizes GPU for games.</li>
+          <li><strong>Disable Power Throttling:</strong> Prevents CPU throttling under load.</li>
+          <li><strong>Disable Nagle Algorithm:</strong> Can reduce network latency.</li>
+          <li><strong>Disable Mouse Acceleration:</strong> Raw, consistent mouse input.</li>
+        </ul>
+      </div>
+      <div class="tweak-column glass">
+        <h3>Network & Internet</h3>
+        <ul>
+          <li><strong>Enable TCP RSS:</strong> Multi-core packet processing.</li>
+          <li><strong>Flush DNS Cache:</strong> Clears DNS and resets Winsock.</li>
+          <li><strong>Enable TCP Fast Open:</strong> Faster TCP handshakes.</li>
+          <li><strong>Increase Max User Ports:</strong> Larger dynamic port range.</li>
+          <li><strong>Disable NetBIOS over TCP:</strong> Better security.</li>
+          <li><strong>Disable IPv6 (if unused):</strong> Simplifies stack if you don’t use IPv6.</li>
+          <li><strong>Disable Peer-to-Peer Updates:</strong> Stops Delivery Optimization bandwidth usage.</li>
+        </ul>
+      </div>
+      <div class="tweak-column glass">
+        <h3>Privacy & Security</h3>
+        <ul>
+          <li><strong>Disable Telemetry Service:</strong> Stops data collection service.</li>
+          <li><strong>Disable Advertising ID:</strong> Turns off ad tracking ID.</li>
+          <li><strong>Disable Feedback Requests:</strong> Stops feedback prompts.</li>
+          <li><strong>Disable Cortana Search Service:</strong> Disables Windows Search service.</li>
+          <li><strong>Disable Location Tracking:</strong> Denies location access.</li>
+          <li><strong>Disable Windows Error Reporting:</strong> Stops error reporting uploads.</li>
+          <li><strong>Disable Bing Web Search in Start:</strong> Local-only Start menu search.</li>
+        </ul>
+      </div>
+      <div class="tweak-column glass">
+        <h3>Winget Apps</h3>
+        <ul>
+          <li>Install Google Chrome</li>
+          <li>Install Firefox</li>
+          <li>Install Discord</li>
+          <li>Install Steam</li>
+          <li>Install OBS Studio</li>
+          <li>Install VS Code</li>
+          <li>Install Git, 7-Zip, VLC, more</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section fade-in">
+    <div class="section-header">
+      <h2>How It Works</h2>
+      <p>From command to fully optimized system in four simple steps.</p>
+    </div>
+    <div class="how-grid">
+      <article class="how-card glass">
+        <span class="step-number">01</span>
+        <h3>Open PowerShell as Admin</h3>
+        <p>Right-click Start → “Windows PowerShell (Admin)” or “Terminal (Admin)”. Administrator privileges are required.</p>
+      </article>
+      <article class="how-card glass">
+        <span class="step-number">02</span>
+        <h3>Paste the Command</h3>
+        <p>Copy the one-liner from the Download section and press Enter. The script is fetched directly from GitHub.</p>
+      </article>
+      <article class="how-card glass">
+        <span class="step-number">03</span>
+        <h3>Select Your Tweaks</h3>
+        <p>A clean GUI loads with all 60+ tweaks organized by category. Hover over each tweak to see its benefit.</p>
+      </article>
+      <article class="how-card glass">
+        <span class="step-number">04</span>
+        <h3>Apply & Reboot</h3>
+        <p>Click “Apply Selected Tweaks”. A restart is recommended for all changes to take full effect.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download" class="section fade-in download-section">
+    <div class="section-header">
+      <h2>Ready to Optimize?</h2>
+      <p>Run TheCoreTweaker with a single PowerShell command. No installer. No bloat.</p>
+    </div>
+
+    <div class="terminal glass">
+      <div class="terminal-header">
+        <span class="term-title">PowerShell (Admin)</span>
+      </div>
+      <div class="terminal-body">
+        <code id="commandText">
+PS C:\> irm https://raw.githubusercontent.com/1245ym/TheCoreTweaker/main/TheCoreTweaker.ps1 | iex
+        </code>
+      </div>
+    </div>
+
+    <div class="download-actions">
+      <button class="btn btn-primary" onclick="copyCommand()">Copy Command</button>
+      <a href="TheCoreTweaker.ps1" download class="btn btn-ghost">Download Script (.ps1)</a>
+      <a href="https://github.com/1245ym/TheCoreTweaker" target="_blank" class="btn btn-outline">View Source on GitHub</a>
+    </div>
+
+    <ul class="download-notes">
+      <li>Requires administrator privileges.</li>
+      <li>Windows 10/11 only.</li>
+      <li>Creates a system restore point via the GUI button.</li>
+    </ul>
+  </section>
+
+  <!-- CHANGELOG -->
+  <section id="changelog" class="section fade-in">
+    <div class="section-header">
+      <h2>Changelog</h2>
+      <p>Track how TheCoreTweaker evolves over time.</p>
+    </div>
+    <div class="changelog glass">
+      <article class="changelog-entry">
+        <h3>v1.0 — Initial Release</h3>
+        <p>First public version of TheCoreTweaker.</p>
+        <ul>
+          <li>Added 60+ system tweaks across Gaming, Network, Privacy, and Winget Apps.</li>
+          <li>Implemented GUI with categories and hover-to-see-benefit behavior.</li>
+          <li>Added “Create System Restore Point” button.</li>
+          <li>Added “Apply Selected Tweaks” button with status messages.</li>
+          <li>Released under MIT License.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>TheCoreTweaker</h3>
+        <p>Windows optimization utility for gamers, creators, and power users. Clean, script-based, and fully inspectable.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#tweaks">Tweaks</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://github.com/1245ym/TheCoreTweaker" target="_blank">GitHub Repository</a></li>
+          <li><a href="https://github.com/1245ym/TheCoreTweaker" target="_blank">Report an Issue</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 TheCoreTweaker • MIT License</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
